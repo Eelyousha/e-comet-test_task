@@ -1,0 +1,2 @@
+aiohttp==3.11.11
+aiochclient==2.6.0
