@@ -25,7 +25,7 @@ class Settings(BaseSettings):
 
 
 @asynccontextmanager
-async def lifespan(app: FastAPI):
+async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     settings = Settings()  # type: ignore
 
     app.state.pool = await asyncpg.create_pool(
